@@ -12,7 +12,7 @@ const LUCK = {
 
         //r = r.min(player.max_rarity.add(1))
 
-        return r.floor()
+        return r
     },
 }
 
