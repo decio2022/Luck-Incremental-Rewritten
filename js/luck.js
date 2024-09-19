@@ -1,22 +1,14 @@
 const LUCK = {
     mult() {
         let x = E(1)
-
-        x = x.mul(upgradeEffect('pp',0)[1]).mul(upgradeEffect('tp',0)[1]).mul(upgradeEffect('rp',0)[1]).mul(upgradeEffect('es',0)[1])
-
-        x = x.pow(tmp.mTierEff.luck||1)
-
         return x
     },
     pow() {
         let x = E(1)
-
-        x = x.mul(upgradeEffect('tp',2))
-
         return x
     },
     generate() {
-        let r = Decimal.pow(Math.random(),-1).pow(tmp.luckPow).mul(tmp.luckMult).log(tmp.luckBase).scale(tmp.raritySS,2,0,true).scale(1000,1.001,1,true)
+        let r = 5
 
         //r = r.min(player.max_rarity.add(1))
 
@@ -80,10 +72,8 @@ function roll() {
 }
 
 tmp_update.push(()=>{
-    tmp.raritySS = E(100).add(upgradeEffect('tp',4,0))
-
     tmp.luckBase = 1.25
-    tmp.rollInt = 1-upgradeEffect('pp',1,0)
+    tmp.rollInt = 1-upgradeEffect('rp',1,0)
     tmp.luckMult = LUCK.mult()
     tmp.luckPow = LUCK.pow()
 })
