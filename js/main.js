@@ -143,28 +143,28 @@ const MAIN = {
 
 el.update.main = ()=>{
     if (tab == 0) {
-        tmp.el.pres_btn.setClasses({locked: tmp.ppGain.lt(1), pres_btn: true})
+        tmp.el.pres_btn.setClasses({locked: tmp.rpGain.lt(1), pres_btn: true})
 
         tmp.el.pres_btn.setHTML(`
-        (Require ${getRarityName(15).bold()})<br>
-        Rebirth for ${tmp.ppGain.format(0).bold()} Rebirth Points
-        `)
+       // (Require ${getRarityName(2).bold()})<br>
+        //Rebirth for ${tmp.rpGain.format(0).bold()} Rebirth Points
+        //`)
 
-        tmp.el.tran_btn.setDisplay(player.pTimes>0)
-        tmp.el.tran_btn.setClasses({locked: tmp.tpGain.lt(1), pres_btn: true})
+       // tmp.el.tran_btn.setDisplay(player.pTimes>0)
+       // tmp.el.tran_btn.setClasses({locked: tmp.tpGain.lt(1), pres_btn: true})
 
-        tmp.el.tran_btn.setHTML(`
-        (Require ${getRarityName(100).bold()})<br>
-        Transcend for ${tmp.tpGain.format(0).bold()} Trancension Points
-        `)
+        //tmp.el.tran_btn.setHTML(`
+        //(Require ${getRarityName(100).bold()})<br>
+        //Transcend for ${tmp.tpGain.format(0).bold()} Trancension Points
+       // `)
 
-        tmp.el.rein_btn.setDisplay(player.tTimes>0)
-        tmp.el.rein_btn.setClasses({locked: tmp.rpGain.lt(1), pres_btn: true})
+        //tmp.el.rein_btn.setDisplay(player.tTimes>0)
+        //tmp.el.rein_btn.setClasses({locked: tmp.rpGain.lt(1), pres_btn: true})
 
-        tmp.el.rein_btn.setHTML(`
-        (Require ${getRarityName(300).bold()})<br>
-        Reincarnate for ${tmp.rpGain.format(0).bold()} Reincarnation Points
-        `)
+        //tmp.el.rein_btn.setHTML(`
+        //(Require ${getRarityName(300).bold()})<br>
+        //Reincarnate for ${tmp.rpGain.format(0).bold()} Reincarnation Points
+        //`)
     }
     // else if (tab == 1) {
     //     tmp.el.mastery_btn.setClasses({locked: player.max_rarity.lt(tmp.mTierReq), pres_btn: true})
@@ -189,12 +189,8 @@ el.update.main = ()=>{
 }
 
 tmp_update.push(()=>{
-    tmp.ppGain = MAIN.prestige.gain()
-    tmp.tpGain = MAIN.trans.gain()
-    tmp.rpGain = MAIN.rein.gain()
-
-    tmp.mTierReq = MAIN.mastery.req()
-    tmp.mTierEff = MAIN.mastery.effect()
-
-    tmp.essGain = MAIN.mastery.essGain()
+    //tmp.ppGain = MAIN.prestige.gain()
+    //tmp.tpGain = MAIN.trans.gain()
+    //tmp.rpGain = MAIN.rein.gain()
+    tmp.rpGain = MAIN.rebirth.gain()
 })
