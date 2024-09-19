@@ -8,7 +8,10 @@ const LUCK = {
         return x
     },
     generate() {
-        let r = 5.0
+        let x = 5.0
+        let 
+        let r = Decimal.pow(x,player.max_rarity.gte()).pow(tmp.luckPow).mul(tmp.luckMult).log(tmp.luckBase).scale(tmp.raritySS,2,0,true).scale(1000,1.001,1,true)
+
 
         //r = r.min(player.max_rarity.add(1))
 
