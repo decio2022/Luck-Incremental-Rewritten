@@ -146,9 +146,9 @@ el.update.main = ()=>{
         tmp.el.pres_btn.setClasses({locked: tmp.rpGain.lt(1), pres_btn: true})
 
         tmp.el.pres_btn.setHTML(`
-       // (Require ${getRarityName(2).bold()})<br>
-        //Rebirth for ${tmp.rpGain.format(0).bold()} Rebirth Points
-        //`)
+        (Require ${getRarityName(2).bold()})<br>
+        Rebirth for ${tmp.rpGain.format(0).bold()} Rebirth Points
+        `)
 
        // tmp.el.tran_btn.setDisplay(player.pTimes>0)
        // tmp.el.tran_btn.setClasses({locked: tmp.tpGain.lt(1), pres_btn: true})
