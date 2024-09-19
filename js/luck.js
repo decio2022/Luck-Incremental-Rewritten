@@ -8,7 +8,7 @@ const LUCK = {
         return x
     },
     generate() {
-        let r = 5
+        let r = 5.0
 
         //r = r.min(player.max_rarity.add(1))
 
