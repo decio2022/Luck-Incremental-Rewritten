@@ -26,7 +26,7 @@ const MAIN = {
             player.max_rarity = E(0)
             player.roll_time = 0
         },
-    }
+    },
 }
 
 // const MAIN = {
