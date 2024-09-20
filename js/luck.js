@@ -71,7 +71,8 @@ function roll() {
 
 tmp_update.push(()=>{
     tmp.luckBase = 5
-    tmp.rollInt = 1-upgradeEffect('rp',1,0)
+    //tmp.rollInt = 1-upgradeEffect('rp',1,0)
+    tmp.rollInt = 1
     tmp.luckMult = LUCK.mult()
     tmp.luckPow = LUCK.pow()
 })
