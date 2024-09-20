@@ -9,6 +9,7 @@ const UPGRADES = {
         ctn: [
             
         ],
+    },
 }
 
 const UPG_START_COST = (()=>{
