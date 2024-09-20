@@ -8,12 +8,8 @@ const LUCK = {
         return x
     },
     generate() {
-        let x = 5.0
-        let r = Decimal.pow(x,player.max_rarity.gte()).pow(tmp.luckPow).mul(tmp.luckMult).log(tmp.luckBase).scale(tmp.raritySS,2,0,true).scale(1000,1.001,1,true)
-
-
+        let r = Decimal.pow(Math.random(),-1).pow(tmp.luckPow).mul(tmp.luckMult).log(tmp.luckBase).scale(tmp.raritySS,2,0,true).scale(1000,1.001,1,true)
         //r = r.min(player.max_rarity.add(1))
-
         return r
     },
 }
@@ -74,7 +70,7 @@ function roll() {
 }
 
 tmp_update.push(()=>{
-    tmp.luckBase = 1.25
+    tmp.luckBase = 5
     tmp.rollInt = 1-upgradeEffect('rp',1,0)
     tmp.luckMult = LUCK.mult()
     tmp.luckPow = LUCK.pow()
