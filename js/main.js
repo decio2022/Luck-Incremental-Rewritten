@@ -17,8 +17,8 @@ const MAIN = {
         },
         reset() {
             if (player.max_rarity.gte(2)) {
-                 player.pp = player.pp.add(tmp.ppGain)
-                 player.pTimes++
+                 player.rp = player.rp.add(tmp.ppGain)
+                 //player.pTimes++
                 this.doReset()
             }
         },
