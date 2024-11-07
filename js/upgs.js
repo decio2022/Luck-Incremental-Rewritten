@@ -2,9 +2,9 @@ const UPGRADES = {
     pp: {
         tab: 0,
         res: ["PP",()=>[player,'pp'],"Prestige Points (PP)"],
-        unl: ()=>player.pTimes>0,
+        unl: ()=> {return true},
 
-        auto: () => hasUpgrade('rp',3),
+        //auto: () => hasUpgrade('rp',3),
 
         ctn: [
             {
@@ -15,7 +15,7 @@ const UPGRADES = {
                 effect(i) {
                     i = i.mul(upgradeEffect('pp',3))
 
-                    let b = Decimal.add(upgradeEffect('pp',2),2)
+                    let b = new Decimal("2")
                     let x = b.pow(i)
 
                     return [b,x]
@@ -34,44 +34,7 @@ const UPGRADES = {
                     return x
                 },
                 effDesc: x => "-"+format(x),
-            },{
-                desc: () => `Increase PU1's base by +0.5 every level.`,
-                cost: i => Decimal.pow(10,i).mul(1e3),
-                bulk: i => i.div(1e3).log(10),
-
-                effect(i) {
-                    i = i.mul(upgradeEffect('pp',3))
-
-                    let x = i.div(2)
-                    if (hasUpgrade('tp',3)) x = x.mul(2)
-                    return x
-                },
-                effDesc: x => "+"+format(x,1),
-            },{
-                unl: () => player.tTimes>0,
-
-                desc: () => `Previous prestige upgrades are +2.5% stronger per level.`,
-                cost: i => Decimal.pow(10,i.pow(2)).mul(1e18),
-                bulk: i => i.div(1e18).log(10).root(2),
-
-                effect(i) {
-                    let x = i.mul(0.025).add(1)
-                    return x
-                },
-                effDesc: x => formatPercent(x.sub(1))+" stronger",
-            },{
-                unl: () => player.mastery_tier>0,
-
-                desc: () => `Double mastery essence gain.`,
-                cost: i => Decimal.pow(1e5,i.pow(2)).mul(1e100),
-                bulk: i => i.div(1e100).log(1e5).root(2),
-
-                effect(i) {
-                    let x = Decimal.pow(2,i)
-                    return x
-                },
-                effDesc: x => formatMult(x),
-            },
+            }
         ],
     },
     tp: {

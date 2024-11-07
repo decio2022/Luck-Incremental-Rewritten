@@ -78,13 +78,10 @@ function getPlayerData() {
         upgrade: {},
 
         pp: E(0),
-        pTimes: 0,
 
         tp: E(0),
-        tTimes: 0,
 
         rp: E(0),
-        rTimes: 0,
 
         mastery_tier: 0,
         mastery_essence: E(0),

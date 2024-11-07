@@ -4,7 +4,7 @@ var tmp_update = []
 function resetTemp() {
     keep = []
     tmp = {
-        luckBase: 1.25,
+        luckBase: 5,
         luckMult: E(1),
         luckPow: E(1),
 

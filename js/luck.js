@@ -82,7 +82,7 @@ function roll() {
 tmp_update.push(()=>{
     tmp.raritySS = E(100).add(upgradeEffect('tp',4,0))
 
-    tmp.luckBase = 1.25
+    tmp.luckBase = 5
     tmp.rollInt = 1-upgradeEffect('pp',1,0)
     tmp.luckMult = LUCK.mult()
     tmp.luckPow = LUCK.pow()

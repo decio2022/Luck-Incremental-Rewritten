@@ -22,7 +22,6 @@ const MAIN = {
         reset() {
             if (player.max_rarity.gte(15)) {
                 player.pp = player.pp.add(tmp.ppGain)
-                player.pTimes++
 
                 this.doReset()
             }
@@ -46,7 +45,6 @@ const MAIN = {
         reset() {
             if (player.max_rarity.gte(100)) {
                 player.tp = player.tp.add(tmp.tpGain)
-                player.tTimes++
 
                 this.doReset()
             }
@@ -72,7 +70,6 @@ const MAIN = {
         reset() {
             if (player.max_rarity.gte(300)) {
                 player.rp = player.rp.add(tmp.rpGain)
-                player.rTimes++
 
                 this.doReset()
             }
