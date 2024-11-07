@@ -126,7 +126,7 @@ el.update.main = ()=>{
         Prestige for ${tmp.ppGain.format(0).bold()} Prestige Points
         `)
 
-        tmp.el.tran_btn.setDisplay(tmp.ppGain >= 0)
+        tmp.el.tran_btn.setDisplay(tmp.ppGain>-1)
         tmp.el.tran_btn.setClasses({locked: tmp.tpGain.lt(1), pres_btn: true})
 
         tmp.el.tran_btn.setHTML(`
@@ -134,7 +134,7 @@ el.update.main = ()=>{
         Transcend for ${tmp.tpGain.format(0).bold()} Trancension Points
         `)
 
-        tmp.el.rein_btn.setDisplay(player.tpGain>=0)
+        tmp.el.rein_btn.setDisplay(player.tpGain>-1)
         tmp.el.rein_btn.setClasses({locked: tmp.rpGain.lt(1), pres_btn: true})
 
         tmp.el.rein_btn.setHTML(`
