@@ -13,8 +13,6 @@ const UPGRADES = {
                 bulk: i => i.log(3),
 
                 effect(i) {
-                    i = i.mul(upgradeEffect('pp',3))
-
                     let b = new Decimal("2")
                     let x = b.pow(i)
 
@@ -27,8 +25,6 @@ const UPGRADES = {
                 bulk: i => i.div(10).log(5),
 
                 effect(i) {
-                    i = i.mul(upgradeEffect('pp',3))
-
                     let x = 1-Decimal.pow(0.8,i.root(2)).toNumber()
 
                     return x
@@ -54,7 +50,7 @@ const UPGRADES = {
                     i = i.mul(upgradeEffect('tp',5))
 
                     let b = E(10)
-                    if (hasUpgrade('tp',3)) b = b.add(upgradeEffect('pp',2))
+                    //if (hasUpgrade('tp',3)) b = b.add(upgradeEffect('pp',2))
                     let x = b.pow(i)
 
                     return [b,x]
