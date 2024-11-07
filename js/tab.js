@@ -3,7 +3,7 @@ const TABS = {
     unl_length() {
         let u = 1
 
-        if (player.ppGain == new Decimal("e69")) u = 2
+        if (tmp.ppGain == new Decimal("e69")) u = 2
 
         return u
     },
