@@ -110,7 +110,7 @@ const MAIN = {
             return {luck: x, gen: y}
         },
         essGain() {
-            let x = tmp.mTierEff.gen.mul(upgradeEffect('pp',4))
+            let x = tmp.mTierEff.gen.mul(1)
 
             return x
         },
