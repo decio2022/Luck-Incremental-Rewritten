@@ -30,7 +30,7 @@ const UPGRADES = {
                     return x
                 },
                 effDesc: x => "-"+format(x),
-            }
+            },
         ],
     },
     tp: {
