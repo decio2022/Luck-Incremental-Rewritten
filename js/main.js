@@ -51,7 +51,7 @@ const MAIN = {
         },
         doReset() {
             player.pp = E(0)
-            resetUpgrades('pp',hasUpgrade('es',2)?[1]:[])
+            resetUpgrades('pp')
 
             MAIN.prestige.doReset()
         },

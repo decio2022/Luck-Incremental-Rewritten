@@ -50,7 +50,6 @@ const UPGRADES = {
                     i = i.mul(upgradeEffect('tp',5))
 
                     let b = E(10)
-                    //if (hasUpgrade('tp',3)) b = b.add(upgradeEffect('pp',2))
                     let x = b.pow(i)
 
                     return [b,x]
