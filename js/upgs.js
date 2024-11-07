@@ -40,7 +40,7 @@ const UPGRADES = {
     tp: {
         tab: 0,
         res: ["TP",()=>[player,'tp'],"Transcension Points (TP)"],
-        unl: ()=>player.tTimes>0,
+        unl: ()=>{return true},
 
         auto: () => hasUpgrade('es',2),
 
@@ -123,7 +123,7 @@ const UPGRADES = {
     rp: {
         tab: 0,
         res: ["RP",()=>[player,'rp'],"Reincarnation Points (RP)"],
-        unl: ()=>player.rTimes>0,
+        unl: ()=>{return true},
 
         ctn: [
             {
@@ -176,7 +176,7 @@ const UPGRADES = {
     es: {
         tab: 1,
         res: ["Mastery Essence",()=>[player,'mastery_essence'],"Mastery Essence"],
-        unl: ()=>player.mastery_tier>0,
+        unl: ()=>{return true},
 
         ctn: [
             {
