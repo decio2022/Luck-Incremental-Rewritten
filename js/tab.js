@@ -3,8 +3,6 @@ const TABS = {
     unl_length() {
         let u = 1
 
-        if (player.rTimes>0) u++
-
         return u
     },
     sym: `αβγδεζηθικλμνξοπρστυφχψω`,

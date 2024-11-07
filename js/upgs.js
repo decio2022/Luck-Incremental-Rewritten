@@ -4,7 +4,7 @@ const UPGRADES = {
         res: ["PP",()=>[player,'pp'],"Prestige Points (PP)"],
         unl: ()=> {return true},
 
-        //auto: () => hasUpgrade('rp',3),
+        auto: () => hasUpgrade('rp',3),
 
         ctn: [
             {
@@ -87,7 +87,7 @@ const UPGRADES = {
                 desc: () => `PU3 is twice as stronger, and it affects TU1's base.`,
                 cost: i => E(1e4),
             },{
-                unl: () => player.rTimes>0,
+                unl: () => {return true},
 
                 desc: () => `Post-100σ rarity scaling starts +10 later per level.`,
                 cost: i => Decimal.pow(10,i.pow(1.5)).mul(1e45),
